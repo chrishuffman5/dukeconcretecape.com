@@ -1,0 +1,28 @@
+﻿/* Footer Settings */
+#footerBlock {
+	color: #3d3d3d;
+	width: 100%;
+	float: left;
+	height: 70px;
+	background-color: #e1e0e0;
+}
+.footerWrap {
+	font: normal normal normal 12px Lucida Sans Unicode, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	height: 60px;
+	width: 885px;
+	margin: 0px auto;
+	background-color: #857238;
+	color: #fff;
+	padding: 10px 0px 0px 15px;
+	line-height: 160%;
+}
+.footerLink:link, .footerLink:visited, .footerLink:active {
+	font: normal normal normal 12px Lucida Sans Unicode, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	line-height: 145%;
+}
+.footerLink:hover {
+	text-decoration: underline;
+	color: #fff;
+}

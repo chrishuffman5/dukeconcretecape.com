@@ -1,0 +1,37 @@
+﻿/* Logo and Navigation Settings */
+#headerBlock {
+	background: url('../images/top-background.jpg') no-repeat bottom center;
+	float: left;
+	width: 900px;
+	height: 140px;
+}
+.headerLogo {
+	float: left;
+	width: 307px;
+	height: 110px;
+	padding-left:20px;
+}
+.contactNo {
+	float:right;
+	width:350px;
+	background-color:#000;
+	padding:5px 20px 5px 30px;
+	text-align:right;
+	color:#fff;
+}
+.navLink {
+	float:right;
+	width:450px;
+	padding:33px 20px 0px 0px;
+	color:#c7c6c6;
+}
+.navLink a {
+	font: normal normal bold 13px Lucida Sans Unicode, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+.navLink a:hover {
+	font: normal normal bold 13px Lucida Sans Unicode, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #9a2f1b;
+	text-decoration: none;
+}

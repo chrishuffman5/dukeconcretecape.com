@@ -1,0 +1,7 @@
+User-agent: Google
+Disallow: /css-includes/
+Disallow: /script-includes/
+
+User-Agent: *
+Disallow: /css-includes/
+Disallow: /script-includes/
