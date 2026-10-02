@@ -1,182 +1,910 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="Content-Language" content="en-us" />
-<link rel="icon" type="image/png"  href="images/bullet.png" />
-<title>Duke Concrete Finishing : Cape Girardeau, MO Concrete Specialists</title>
-<meta name="description" content="Duke Concrete Finishing provides quality and professional concrete services in Cape Girardeau, MO Jackson, MO and surrounding areas" />
-<meta name="keywords" content="cape girardeau mo jackson mo concrete finishing concrete services" />
-<meta name="AUTHOR" content="Duke Concrete Finishing : Cape Girardeau, MO" />
-<meta name="ROBOTS" content="INDEX, FOLLOW" />
-<meta name="REVISIT-AFTER" content="1 DAYS" />
-<meta name="RATING" content="GENERAL" />
-<meta name="DC.Language" content="en" >
-<meta name="DC.Publisher" content="Duke Concrete Finishing : Cape Girardeau, MO" >
-<meta name="DC.format" scheme="DCTERMS.IMT" content="text/html" />
-<meta name="DC.creator" content="Jeremiah Duke Sr. Duke Concrete Finishing : Cape Girardeau, MO" />
-<style type="text/css" media="all">
-@import url('css-includes/mainSettings.css');
-@import url('css-includes/headerSettings.css');
-@import url('css-includes/footerSettings.css');
-@import url('css-includes/sliderSettings.css');
-@import url('css-includes/lightbox.css');
-@import url('css-includes/sticky-navigation.css');
-</style>
-	<script type="text/javascript" src="script-includes/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="script-includes/easySlider1.7.js"></script>
-	<script type="text/javascript" src="script-includes/go-to.js"></script>
-	<script type="text/javascript" src="script-includes/lightbox.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true,
-				numeric: true
-			});
-		});	
-	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duke Concrete Finishing - Professional concrete contractor serving Cape Girardeau, Jackson, Perryville, Sikeston, Farmington and Southeast Missouri. Specializing in concrete driveways, patios, pool decks, sidewalks and RV pads. FREE estimates. Fully insured.">
+    <meta name="keywords" content="concrete contractor cape girardeau mo, concrete finishing southeast missouri, concrete driveway jackson mo, concrete patio perryville mo, pool deck concrete sikeston mo, concrete services farmington mo, rv pad concrete cape girardeau, residential concrete southeast missouri, commercial concrete missouri">
+    <title>Duke Concrete Finishing | Cape Girardeau, MO Concrete Specialists</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-<script>
-$(function() {
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	// grab the initial top offset of the navigation 
-	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
-	
-	// our function that decides weather the navigation bar should have "fixed" css position or not.
-	var sticky_navigation = function(){
-		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
-		
-		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
-		if (scroll_top > sticky_navigation_offset_top) { 
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
-		} else {
-			$('#sticky_navigation').css({ 'position': 'relative' }); 
-		}   
-	};
-	
-	// run our function on load
-	sticky_navigation();
-	
-	// and run it again every time you scroll
-	$(window).scroll(function() {
-		 sticky_navigation();
-	});
-	
-	// NOT required:
-	// for this demo disable all links that point to "#"
-	$('a[href="#"]').click(function(event){ 
-		event.preventDefault(); 
-	});
-	
-});
-</script>
+        :root {
+            --primary-black: #000000;
+            --secondary-black: #1a1a1a;
+            --dark-gray: #2a2a2a;
+            --medium-gray: #4a4a4a;
+            --light-gray: #e5e5e5;
+            --white: #ffffff;
+            --accent-gray: #808080;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
 
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            background: white;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background: var(--white);
+            color: var(--primary-black);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('gallery/foundation-slab-concrete-pour-southeast-missouri.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--white);
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-black);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Section */
+        #services {
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-black);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-black);
+            font-weight: 800;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-black);
+        }
+
+        .stat-label {
+            color: var(--medium-gray);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background: var(--primary-black);
+            color: var(--white);
+        }
+
+        #gallery .section-title {
+            color: var(--white);
+        }
+
+        #gallery .section-subtitle {
+            color: var(--light-gray);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            aspect-ratio: 16/10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 2rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--light-gray);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-black);
+        }
+
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-black);
+            font-weight: 700;
+        }
+
+        .contact-details p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        .service-areas {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-areas h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-black);
+            font-weight: 700;
+        }
+
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .area-tag {
+            background: var(--primary-black);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 108px;
+                flex-direction: column;
+                background: var(--primary-black);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .logo {
+                height: 62px;
+            }
+        }
+    </style>
 </head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <img src="images/duke-concrete-logo-color.png" alt="Duke Concrete Finishing" class="logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<body id="home">
-	<div class="mainBlock" id="sticky_navigation_wrapper" >
-		<div class="topBack" id="sticky_navigation" >
-			<div class="bodyBlock" >
-				
-				<a href="#contact">contacts</a>
-				<a href="#gallery">gallery</a>
-				<a href="#about">about</a>
-				<a href="#home">home</a>
-			</div>
-		</div>	
-	</div>
-	<div class="mainBlock">
-		<div class="bannerBlock"  style="text-align:center;">
-			<br/><br/>
-			<h2><br/><br/><br/><br/><br/><br/></h2>
-		</div>
-	</div>
-	<div class="mainBlock">
-		<div class="bodyBackground">
-			<div class="bodyBlock" style="text-align:center;">
-				<h1>Duke Concrete Finishing</h1>
-				<h3>Cape Girardeau, MO Concrete Finishing</h3>
-				<p>
-				Providing concrete finishing services to the Cape Girardeau, MO area including Jackson, Perryville, Sikeston and surrounding areas.<br/><br/>
-				</p>
-					<div>
-					<div class="divBullet">Concrete Finishing</div>	
-					<div class="divBullet">General Construction</div>				
-	
-					</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="mainBlock">
-		<div class="bodyBackground">
-			<div class="bodyBlock">
-				<div class="divTwo" style="padding-right:30px;" id="about"><h3>About Our Services</h3>
-					We pride ourselves with the upmost ethical standards and genuinely care for each and every one of our customers and treat their property like it is our own. Our character stands out in the work that we do, as well as, our eagerness to maintain a personable yet professional image. Rest assured that your property is in good hands and backed by our $1 million liability insurance policy. Whether you require concrete finishing or general construction, we would love to service your property.
-					<br/><br/>
-					<div class="divBullet">Concrete Finishing</div>	
-					<div class="divBullet">General Construction</div>						
-				</div>
-				<div itemscope itemtype="http://schema.org/LocalBusiness" class="divTwo" id="contact"><h3>Contact</h3>
-				FREE ESTIMATES on all of our concrete finishing and general construction services!<br/>
-				We now accept Visa, Mastercard, Discover and American Express!<br/>
-					<span itemprop="name" style="color:#4c8725;font-weight:bold">Duke Concrete Finishing</span><br/>
-						<span itemscope itemtype="http://schema.org/PostalAddress">
-							<span itemprop="streetAddress">1601 Kurre Lane</span><br/>
-							<span itemprop="addressLocality">Cape Girardeau</span>,
-							<span itemprop="addressRegion">MO</span>
-							<span itemprop="postalCode">63701</span>
-						</span><br/>
-					Phone:  
-					<span itemprop="telephone">801-674-8419</span><br/>
-					Email: <a href="mailto:jeremiah@dukeconcretecape.com">
-					<meta itemprop="email" content="jeremiah@dukeconcretecape.com">jeremiah@dukeconcretecape.com</a><br/>
-					Website: <a itemprop="url" href="http://www.dukeconcretecape.com">www.dukeconcretecape.com</a><br/><br/>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="mainBlock">
-		<div class="greenBackground">
-			<div class="bodyBlock" style="text-align:center;">
-				<h2>Follow Duke Concrete Finishing</h2>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="images/duke-concrete-logo-light.png" alt="Duke Concrete Finishing" style="max-width: 700px; width: 100%; height: auto; margin-bottom: 2rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));">
+            <p>Professional Concrete Solutions Across Southeast Missouri</p>
+            <a href="#contact" class="cta-button">Get Free Estimate</a>
+        </div>
+    </section>
 
-				<div class="divTwo" id="contact"><h4>Facebook</h4>
-					<div style="background: #3B5998;padding: 5px;">
-						<img src="http://www.facebook.com/images/fb_logo_small.png" alt="Facebook"/>
-						<img src="https://badge.facebook.com/badge/781422011886374.740448648.41817001.png" alt="" width="0" height="0"/>
-					</div>
-					<div style="background: #EDEFF4;display: block;border-right: 1px solid #D8DFEA;border-bottom: 1px solid #D8DFEA;border-left: 1px solid #D8DFEA;margin: 0px;padding: 0px 0px 5px 0px;">
-						<div style="background: #FFFFFF;clear: both;display: block;margin: 0px;overflow: hidden;padding: 5px;">
-							<table cellspacing="0" cellpadding="0" border="0">
-								<tr>
-									<td valign="middle">
-										<a href="https://www.facebook.com/Duke-Concrete-Finishing-and-General-Labor-112727056923487" target="_TOP" style="border: 0px;color: #3B5998;font-family: verdana;font-size: 12px;font-weight: bold;margin: 0px;padding: 0px;text-decoration: none;" title="Duke Concrete Cape Girardeau MO">
-										<img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.6435-9/82636152_116618486534344_3389424186677002240_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=e3f864&_nc_ohc=XjkajaW2WWUAX9RYLcy&_nc_ht=scontent-atl3-1.xx&oh=00_AT9w2vSp9xW8Rh2e7KBiGTuKFU24nPQQOeyUx-UxQrnPrw&oe=62719E5E&size=square" style="width: 150px;border: 0px;margin: 0px;padding: 0px;" alt="Duke Concrete Finishing Cape Girardeau MO."/></a>
-									</td>
-									
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>				
-			</div>
-		</div>
-	</div>
-	<div class="mainBlock">
-		<div class="footerBackground">
-			<div class="bodyBlock">Copyright © 2022 <span style="color:#fff32f;">Duke Concrete Finishing.</span> | <span style="color:#fff32f;">www.dukeconcretecape.com</span> | <span style="color:#fff32f;">Cape Girardeau, MO</span></div>
-			<br/><br/><br/>
-			<div class="bodyBlock" style="color:#63754b;">Site search terms: Concrete finishing in Cape Girardeau, MO, Jackson, MO, Perryville, MO, Sikeston, MO</div>
-		</div>
-	</div>
-<!-- Place this tag after the last widget tag. -->
-<script type="text/javascript">
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Expert concrete finishing services for residential and commercial properties throughout Southeast Missouri</p>
 
-</script>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏠</div>
+                    <h3>Concrete Driveways</h3>
+                    <p>Durable, professionally finished driveways that enhance curb appeal and withstand Missouri weather.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌿</div>
+                    <h3>Patios & Pool Decks</h3>
+                    <p>Beautiful outdoor living spaces with smooth, slip-resistant concrete finishes perfect for entertaining.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚶</div>
+                    <h3>Sidewalks & Walkways</h3>
+                    <p>Safe, attractive concrete pathways designed to complement your property's landscape.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚐</div>
+                    <h3>RV Pads & Parking</h3>
+                    <p>Heavy-duty concrete pads engineered to support RVs, boats, and large vehicles.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Concrete</h3>
+                    <p>Large-scale concrete projects for businesses, warehouses, and commercial properties.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔨</div>
+                    <h3>General Construction</h3>
+                    <p>Complete construction services to support your residential and commercial projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>About Duke Concrete Finishing</h2>
+                    <p>Duke Concrete Finishing is Southeast Missouri's premier concrete contractor, specializing in high-quality concrete finishing for residential and commercial properties.</p>
+                    <p>We pride ourselves on upholding the highest ethical standards and genuinely care for each customer, treating every property as if it were our own. Our character shines through in our work, combined with our commitment to maintaining a personable yet professional image.</p>
+                    <p>Your property is protected by our $1 million liability insurance policy. We serve Cape Girardeau and travel up to 2 hours to bring professional craftsmanship to your project.</p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">$1M</div>
+                            <div class="stat-label">Insured</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-areas fade-in">
+                    <h3>Service Areas</h3>
+                    <div class="areas-list">
+                        <span class="area-tag">Cape Girardeau</span>
+                        <span class="area-tag">Jackson</span>
+                        <span class="area-tag">Perryville</span>
+                        <span class="area-tag">Sikeston</span>
+                        <span class="area-tag">Farmington</span>
+                        <span class="area-tag">Scott City</span>
+                        <span class="area-tag">Marble Hill</span>
+                        <span class="area-tag">Dexter</span>
+                        <span class="area-tag">Poplar Bluff</span>
+                        <span class="area-tag">Ste. Genevieve</span>
+                    </div>
+                    <p style="margin-top: 1.5rem; color: var(--medium-gray);">We travel up to 2 hours from Cape Girardeau to serve all Southeast Missouri communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">View our completed concrete finishing projects throughout Cape Girardeau and Southeast Missouri</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="gallery/pool-deck-concrete-finishing-cape-girardeau-mo.jpg" alt="Pool Deck Concrete">
+                    <div class="gallery-overlay">
+                        <h3>Pool Deck Finishing</h3>
+                        <p>Cape Girardeau, MO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/residential-concrete-driveway-southeast-missouri.jpg" alt="Concrete Driveway">
+                    <div class="gallery-overlay">
+                        <h3>Residential Driveway</h3>
+                        <p>Southeast Missouri</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/smooth-concrete-patio-finishing-cape-girardeau.jpg" alt="Concrete Patio">
+                    <div class="gallery-overlay">
+                        <h3>Smooth Patio Finish</h3>
+                        <p>Cape Girardeau</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/concrete-patio-installation-cape-girardeau-mo.jpg" alt="Patio Installation">
+                    <div class="gallery-overlay">
+                        <h3>Patio Installation</h3>
+                        <p>Cape Girardeau, MO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/new-residential-concrete-driveway-missouri.jpg" alt="New Driveway">
+                    <div class="gallery-overlay">
+                        <h3>New Residential Driveway</h3>
+                        <p>Missouri</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/concrete-sidewalk-installation-cape-girardeau.jpg" alt="Sidewalk Installation">
+                    <div class="gallery-overlay">
+                        <h3>Sidewalk Installation</h3>
+                        <p>Cape Girardeau</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/pool-deck-concrete-work-southeast-missouri.jpg" alt="Pool Deck">
+                    <div class="gallery-overlay">
+                        <h3>Pool Deck Project</h3>
+                        <p>Southeast Missouri</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/backyard-concrete-patio-cape-girardeau-mo.jpg" alt="Backyard Patio">
+                    <div class="gallery-overlay">
+                        <h3>Backyard Patio</h3>
+                        <p>Cape Girardeau, MO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/rv-pad-concrete-installation-southeast-missouri.jpg" alt="RV Pad">
+                    <div class="gallery-overlay">
+                        <h3>RV Pad Installation</h3>
+                        <p>Southeast Missouri</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in">
+                    <img src="gallery/foundation-slab-concrete-pour-southeast-missouri.jpg" alt="Foundation Slab" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Foundation Slab</h3>
+                        <p>Southeast Missouri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Free estimates on all concrete finishing and general construction services</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>1601 Kurre Lane<br>Cape Girardeau, MO 63701</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>801-674-8419</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>jeremiah@dukeconcretecape.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">💳</div>
+                        <div class="contact-details">
+                            <h3>Payment Options</h3>
+                            <p>We accept Visa, Mastercard, Discover, and American Express</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Follow Us</h3>
+                            <p><a href="https://www.facebook.com/profile.php?id=100057683130072" target="_blank" style="color: var(--primary-black); text-decoration: underline;">Duke Concrete Finishing on Facebook</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-areas fade-in">
+                    <h3>Why Choose Duke Concrete?</h3>
+                    <ul style="list-style: none; margin-top: 1.5rem;">
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span>
+                            <strong>$1 Million Liability Insurance</strong> - Your property is fully protected
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span>
+                            <strong>FREE Estimates</strong> - No obligation quotes on all services
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span>
+                            <strong>Professional Quality</strong> - Expert craftsmanship on every project
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span>
+                            <strong>Ethical Standards</strong> - Honest, reliable service you can trust
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span>
+                            <strong>Wide Service Area</strong> - Serving all of Southeast Missouri
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Duke Concrete Finishing | www.dukeconcretecape.com | Cape Girardeau, MO</p>
+            <div class="footer-links">
+                <span>Concrete Contractor</span>
+                <span>•</span>
+                <span>Driveways</span>
+                <span>•</span>
+                <span>Patios</span>
+                <span>•</span>
+                <span>Pool Decks</span>
+                <span>•</span>
+                <span>Southeast Missouri</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+    </script>
 </body>
-
 </html>

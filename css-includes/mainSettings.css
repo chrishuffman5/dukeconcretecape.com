@@ -1,11 +1,11 @@
 ﻿/* Universal CSS Settings */
 body {
-	font: normal normal normal 15px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal normal 16px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
-	color: #353535;
+	color: #2a2a2a;
 	line-height: 180%;
-	background-color: #fff;
+	background-color: #f5f5f5;
 }
 .floatRight {
 	float: right;
@@ -17,25 +17,29 @@ img {
 	border: 0px;
 }
 h1 {
-	font: normal normal bold 35px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal bold 42px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
-	color: #366019;
+	color: #1a1a1a;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 h2 {
-	font: normal normal normal 35px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal bold 36px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 h3 {
-	font: normal normal normal 35px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal 600 28px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
-	color: #2a2a2a;
+	color: #1a1a1a;
 }
 a {
-	color: #4c8725;
+	color: #2a2a2a;
 	text-decoration: underline;
 }
 /* Site wrapper settings */
@@ -46,53 +50,61 @@ a {
 .topBack {
 	width: 100%;
 	height: 110px;
-	background: #fff url('../images/top-background.jpg') repeat-x;
+	background: #1a1a1a;
+	border-bottom: 4px solid #000;
 }
 .bodyBlock {
 	width: 960px;
 	margin: 0px auto;
 }
 .bannerBlock {
-	height: 100%;
+	height: 400px;
 	width: 100%;
-	background: #fff url('../images/stonewall-floral-background.jpg') no-repeat top center;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../gallery/pool-deck-concrete-work-southeast-missouri.jpg') no-repeat center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .bodyBackground {
-	background: #fff url('../images/body-background.jpg') repeat-x;
-	padding: 40px 0px 50px 0px;
+	background: #ffffff;
+	padding: 60px 0px 60px 0px;
 	float: left;
 	width: 100%;
 }
 .greenBackground {
-	background-color: #63754b;
-	padding: 30px 0px 30px 0px;
+	background-color: #2a2a2a;
+	padding: 50px 0px 50px 0px;
 	color: #fff;
 	float: left;
 	width: 100%;
 }
 .topBack a {
-	font: normal normal bold 13px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal bold 14px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	color: #fff;
 	text-decoration: none;
 	line-height: 145%;
 	float: right;
-	padding: 45px 20px 5px 20px;
+	padding: 45px 25px 5px 25px;
 	text-transform: uppercase;
 	height: 60px;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
 }
 .topBack a:hover {
-	font: normal normal bold 13px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
-	color: #fff32f;
+	font: normal normal bold 14px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #1a1a1a;
 	text-decoration: none;
-	background-color: #2c5412;
+	background-color: #fff;
 }
 .footerBackground {
-	font: normal normal normal 13px Open Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font: normal normal normal 13px 'Segoe UI', Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	width: 100%;
 	float: left;
-	background-color: #63754b;
+	background-color: #1a1a1a;
 	color: #fff;
-	padding: 15px 0px 15px 0px;
+	padding: 20px 0px 20px 0px;
+	border-top: 4px solid #000;
 }
 /* Slider Settings */
 .itemBlock {
@@ -120,6 +132,7 @@ a {
 	float: left;
 	width: 200px;
 	background: #fff url('../images/bullet.png') no-repeat;
-	color: #356019;
+	color: #1a1a1a;
 	padding: 0px 10px 0px 20px;
+	font-weight: 500;
 }
